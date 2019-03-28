@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <!-- logger name not visible -->
+            <!-- %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n -->
+            <Pattern>
+                %d{HH:mm:ss} [%thread] %-5level %msg - %logger%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="spark" level="all" />
+    <logger name="org.eclipse.jetty" level="error" />
+
+    <root level="warn">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>
