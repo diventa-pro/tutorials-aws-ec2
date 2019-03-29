@@ -24,6 +24,29 @@
             <version>1.2.3</version>
         </dependency>
 
+        <!--
+        https://github.com/mattsheppard/gethostname4j
+        Return the hostname in a reliable way.
+        -->
+        <dependency>
+            <groupId>com.kstruct</groupId>
+            <artifactId>gethostname4j</artifactId>
+            <version>0.0.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.4.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.4.1</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
     <build>
         <plugins>
@@ -59,7 +82,7 @@
 
             <!--
             =====================================================
-            Provides insight on the MAven project
+            Provides insight on the Maven project
             - mvn help:describe -Dcmd=install (to discover what plugins will be executed in the given phase)
             =====================================================
             -->
