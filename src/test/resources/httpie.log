@@ -1,0 +1,89 @@
+http --verbose --follow  http://169.254.169.254/latest
+GET /latest HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 169.254.169.254
+User-Agent: HTTPie/1.0.2
+
+
+
+HTTP/1.0 301 Moved Permanently
+Connection: keep-alive
+Content-Length: 0
+Date: Tue, 02 Apr 2019 16:39:50 GMT
+Location: http://169.254.169.254/latest/
+Server: EC2ws
+
+
+
+GET /latest/ HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 169.254.169.254
+User-Agent: HTTPie/1.0.2
+
+
+
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Connection: keep-alive
+Content-Length: 27
+Content-Type: text/plain
+Date: Tue, 02 Apr 2019 16:39:50 GMT
+ETag: "383598544"
+Last-Modified: Tue, 02 Apr 2019 16:01:20 GMT
+Server: EC2ws
+
+dynamic
+meta-data
+user-data
+
+
+
+
+
+http --verbose --follow  http://169.254.169.254/latest/meta-data/
+GET /latest/meta-data/ HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: 169.254.169.254
+User-Agent: HTTPie/1.0.2
+
+
+
+HTTP/1.0 200 OK
+Accept-Ranges: bytes
+Connection: keep-alive
+Content-Length: 293
+Content-Type: text/plain
+Date: Tue, 02 Apr 2019 16:41:15 GMT
+ETag: "3036427067"
+Last-Modified: Tue, 02 Apr 2019 16:01:20 GMT
+Server: EC2ws
+
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+events/
+hostname
+identity-credentials/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+public-keys/
+reservation-id
+security-groups
+services/
